@@ -1,0 +1,69 @@
+---
+categories: Algorithm
+---
+
+## 프로그래머스 단어 변환
+
+### 깊이 우선 탐색(DFS)
+```cpp
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int answer = 50;
+bool check[50];
+
+void checkdiff(string word, string target, vector<string> words, int count) {
+    int len = word.length();
+    int words_size = words.size();
+    
+    if(word == target) {
+        if(answer > count) {
+            answer = count;
+        }
+        
+        return;
+    }
+    
+    for(int w = 0; w < words_size; w++) {
+        if(check[w]) {
+            continue;
+        }
+        
+        int diff = 0;
+        
+        for(int l = 0; l < len; l++) {
+            if( word[l] != words[w][l] ) {
+                diff++;
+            }
+            
+            if(diff > 1) {
+                break;
+            }
+        }
+        
+        if(diff == 1) {
+            check[w] = true;
+            checkdiff(words[w], target, words, count + 1);
+            check[w] = false;
+		}
+    }
+}
+
+int solution(string begin, string target, vector<string> words) {
+    int count = 0;
+    for(int i = 0; i < 50; i++) {
+        check[i] = false;
+    }
+
+    checkdiff(begin, target, words, count);    
+    
+    if( answer == 50 ) {
+        return 0;
+    }
+    
+    return answer;
+}
+```
+
