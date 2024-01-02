@@ -92,7 +92,7 @@ int main()
 }
 ```
 ### 결과 출력
-![결과 출력](../../images/2023-12-04-singleton/result.PNG)
+![결과 출력](../imgaes/2023-12-04-singleton/result.PNG)
 
 ### 결과에 대한 설명
 - ClassA의 객체는 두 번 생성되었고, ClassA의 생성자에서 staticGeneral의 인스턴스를 호출하지만 staticGeneral의 생성자는  한 번만 호출됨.
