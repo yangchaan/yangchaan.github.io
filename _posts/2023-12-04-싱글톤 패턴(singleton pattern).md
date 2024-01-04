@@ -1,5 +1,5 @@
 ---
-tag: [c++, 디자인패턴]
+categories: [c++, 디자인패턴]
 ---
 
 # 싱글톤 패턴(Singleton Pattern)
