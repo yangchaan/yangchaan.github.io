@@ -234,4 +234,4 @@ Window {
 )
 
 ### 결과2
-![결과 출력 2](../imgaes/2024-01-14-qml_cpp_interaction/2024-01-15-qt_qml_cpp연동.PNG)
+![결과 출력 2](../imgaes/2024-01-14-qml_cpp_interaction/2024-01-15-qt_qml_cpp_inter.PNG)
